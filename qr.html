@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Código QR · Michelle Ramírez</title>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800&family=Manrope:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0c0b0e;--ink:#efe9df;--mute:#a9a2b0;--vio:#8b6cff;--line:#2b2830}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Manrope,system-ui,sans-serif;padding:40px max(5vw,16px)}
+main{max-width:760px;margin:0 auto}
+h1{font:800 44px/1 "Big Shoulders Display",Impact,sans-serif;margin:0 0 12px}
+p{color:var(--mute)}
+label{display:block;font-weight:700;margin:24px 0 8px}
+input{width:100%;font:inherit;font-size:16px;padding:12px 14px;border-radius:8px;border:1px solid var(--line);background:#16141a;color:var(--ink)}
+.row{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}
+button{min-height:46px;padding:0 20px;border-radius:999px;border:1px solid var(--ink);background:none;color:var(--ink);font:700 15px Manrope,sans-serif;cursor:pointer}
+button.on{background:var(--vio);border-color:var(--vio);color:#fff}
+#out{margin-top:28px;display:none}
+#out canvas{max-width:320px;width:100%;height:auto;display:block;border:1px solid var(--line)}
+#msg{min-height:1.5em;color:#ffb4a8}
+#raw{display:none}
+</style>
+</head>
+<body>
+<main>
+  <h1>Código QR del portafolio</h1>
+  <p>Escribe la dirección pública definitiva del portafolio (la de Netlify, GitHub Pages o tu dominio). Genera el QR solo cuando esa dirección ya abra el sitio.</p>
+  <label for="url">Dirección pública del portafolio</label>
+  <input id="url" type="url" placeholder="https://michelleramirez.netlify.app" autocomplete="off">
+  <div class="row">
+    <button class="on" id="gen" type="button">Generar QR</button>
+    <button id="dl" type="button" disabled>Descargar PNG para imprimir</button>
+  </div>
+  <p id="msg" role="status"></p>
+  <div id="out"><canvas id="card" width="1200" height="1500" aria-label="Tarjeta con el código QR"></canvas></div>
+  <div id="raw"></div>
+  <p style="margin-top:28px;font-size:14px">Consejos: imprime el QR de al menos 2,5 cm de lado, déjalo sobre fondo blanco y escanéalo con dos teléfonos distintos antes de enviar a imprenta.</p>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+{
+const $ = s => document.querySelector(s);
+function draw(url){
+  const raw = $("#raw"); raw.innerHTML = "";
+  new QRCode(raw, {text:url, width:880, height:880, colorDark:"#141217", colorLight:"#ffffff", correctLevel:QRCode.CorrectLevel.H});
+  const qr = raw.querySelector("canvas");
+  const c = $("#card"), x = c.getContext("2d");
+  x.fillStyle = "#ffffff"; x.fillRect(0,0,1200,1500);
+  x.fillStyle = "#0c0b0e"; x.fillRect(0,0,1200,250);
+  x.fillStyle = "#efe9df"; x.font = "800 110px 'Big Shoulders Display', Impact, sans-serif"; x.textBaseline = "middle";
+  x.fillText("MICHELLE RAMÍREZ", 80, 120);
+  x.fillStyle = "#8b6cff"; x.fillRect(80, 200, 120, 8);
+  x.drawImage(qr, 160, 330, 880, 880);
+  x.fillStyle = "#141217"; x.font = "700 52px Manrope, sans-serif"; x.textAlign = "center";
+  x.fillText("Realizadora audiovisual · Portafolio", 600, 1300);
+  x.fillStyle = "#5d5764"; x.font = "400 40px Manrope, sans-serif";
+  x.fillText(url.replace(/^https?:\/\//,"").replace(/\/$/,""), 600, 1380);
+  x.textAlign = "start";
+  $("#out").style.display = "block"; $("#dl").disabled = false;
+}
+$("#gen").addEventListener("click", () => {
+  const v = $("#url").value.trim();
+  let ok = false; try { const u = new URL(v); ok = u.protocol === "https:"; } catch(e) {}
+  if (!ok) { $("#msg").textContent = "Escribe una dirección completa que empiece por https://"; return; }
+  if (typeof QRCode === "undefined") { $("#msg").textContent = "No se pudo cargar el generador. Revisa tu conexión y recarga la página."; return; }
+  $("#msg").textContent = ""; draw(v);
+});
+$("#dl").addEventListener("click", () => {
+  const a = document.createElement("a");
+  a.href = $("#card").toDataURL("image/png"); a.download = "qr-portafolio-michelle-ramirez.png";
+  document.body.appendChild(a); a.click(); a.remove();
+});
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Michelle Ramírez · Realizadora audiovisual</title>
+<meta name="description" content="Portafolio de Michelle Ramírez, realizadora audiovisual en Bogotá: fotografía de conciertos y retrato, edición de video y diseño. Disponible para prácticas empresariales.">
+<meta property="og:title" content="Michelle Ramírez · Realizadora audiovisual">
+<meta property="og:description" content="Fotografía, edición de video y dirección de arte. Disponible para prácticas empresariales en Bogotá.">
+<meta property="og:image" content="https://caphtura.art/img/og.jpg">
+<meta property="og:url" content="https://caphtura.art/">
+<link rel="canonical" href="https://caphtura.art/">
+<link rel="preload" as="image" href="img/mrkilombo.webp" type="image/webp">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0c0b0e">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE  ocasión: portafolio personal, sobrio y cinematográfico, pensado para un reclutador con poco tiempo
+   IDEA   una hoja de contactos revisada de noche en la mesa de luz: fotogramas, perforaciones de película y marcas de lápiz violeta
+   PICTURE la foto de Mr Kilombo a sangre completa en el inicio, con el nombre en su esquina oscura; tira de fotogramas debajo
+   COLOUR fondo negro tinta #0c0b0e, texto hueso #efe9df, violeta del logo de Caphtura #8b6cff solo para marcas y acciones
+   TYPE   Big Shoulders Display (marquesina de cine, como la portada ONLEVER) + Manrope
+   LAYOUT portátil: foto completa, nombre abajo a la izquierda, ficha rápida de 4 columnas al pie; móvil: foto arriba, nombre, ficha apilada */
+:root{color-scheme:dark;--bg:#0c0b0e;--bg2:#16141a;--line:#2e2740;--deep:#150f24;--ink:#efe9df;--mute:#a9a2b0;--vio:#8b6cff;--vio2:#b7a6ff}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Manrope,system-ui,sans-serif;overflow-x:clip}
+img{max-width:100%;display:block}
+/* textura: luces violeta + trama diagonal fija detrás de todo, y grano de película violeta encima */
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(55vw 45vh at 88% 8%,rgba(139,108,255,.20),transparent 70%),radial-gradient(45vw 55vh at 0% 75%,rgba(104,58,214,.16),transparent 70%),repeating-linear-gradient(135deg,rgba(139,108,255,.055) 0 1px,transparent 1px 13px)}
+body::after{content:"";position:fixed;inset:0;z-index:30;pointer-events:none;opacity:.09;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .62 0 0 0 0 .5 0 0 0 0 1 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:220px}
+a{color:inherit}
+h1,h2,h3{font-family:"Big Shoulders Display",Impact,"Arial Narrow",sans-serif;font-weight:800;line-height:1.02;letter-spacing:-.01em;margin:0;text-wrap:balance}
+h2{font-size:clamp(36px,5vw,56px)}
+h3{font-size:26px;font-weight:600}
+p{margin:0 0 1em}
+.wrap{max-width:1240px;margin:0 auto}
+.band{padding:clamp(48px,7vw,96px) max(5vw,16px)}
+.lead{font-size:clamp(17px,1.6vw,19px);color:var(--ink)}
+.mute{color:var(--mute)}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:0 20px;border-radius:999px;border:1px solid var(--ink);text-decoration:none;font-weight:700;font-size:15px;background:none;color:var(--ink);cursor:pointer;font-family:inherit}
+.btn.on{background:var(--vio);border-color:var(--vio);color:#fff}
+.btn:hover{border-color:var(--vio2);color:var(--vio2)}
+.btn.on:hover{background:#7a58ff;color:#fff}
+:focus-visible{outline:2px solid var(--vio2);outline-offset:3px}
+/* navegación */
+.nav{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:20px;padding:12px max(5vw,16px);background:rgba(16,11,28,.86);backdrop-filter:blur(10px);border-bottom:1px solid rgba(139,108,255,.25)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;white-space:nowrap}
+.brand svg{width:30px;height:30px}
+.mark{font-family:"Big Shoulders Display",Impact,"Arial Narrow",sans-serif;font-weight:800;font-size:26px;letter-spacing:.08em;line-height:1}
+.nav ul{display:flex;gap:4px 18px;list-style:none;margin:0 0 0 auto;padding:0;flex-wrap:wrap}
+.nav ul a{text-decoration:none;font-size:15px;color:var(--mute);padding:10px 0;display:inline-block}
+.nav ul a:hover{color:var(--ink)}
+.nav .btn{min-height:40px;padding:0 16px}
+/* inicio */
+.hero{position:relative;min-height:min(86svh,820px);display:grid;align-items:end;isolation:isolate}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 40%;z-index:-2;filter:contrast(1.05)}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(40vw 40vh at 18% 78%,rgba(139,108,255,.28),transparent 70%),linear-gradient(90deg,rgba(21,13,40,.93) 0%,rgba(24,14,48,.6) 45%,rgba(40,20,90,.12) 75%),linear-gradient(0deg,var(--bg) 0%,rgba(12,11,14,0) 40%)}
+.hero .in{padding:0 max(5vw,16px) clamp(32px,5vw,56px);max-width:1340px;width:100%;margin:0 auto}
+.hero h1{font-size:clamp(64px,11vw,150px);line-height:.88;text-transform:uppercase}
+.role{font-size:clamp(18px,2vw,22px);font-weight:700;margin:14px 0 10px}
+.role b{color:var(--vio2)}
+.hero p.lead{max-width:34em}
+.acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.credit{position:absolute;right:max(5vw,16px);bottom:18px;font-size:13px;color:var(--mute)}
+/* ficha rápida */
+.ficha{background:linear-gradient(90deg,rgba(139,108,255,.10),rgba(139,108,255,.03));display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.ficha div{padding:22px max(2vw,16px);border-left:1px solid var(--line)}
+.ficha div:first-child{border-left:0}
+.ficha dt{font-size:13px;color:var(--vio2);font-weight:700;margin-bottom:6px}
+.ficha dd{margin:0;font-size:15px}
+.ficha a{text-decoration:none;border-bottom:1px solid var(--vio)}
+/* tira de película */
+.strip{display:flex;gap:6px;overflow-x:auto;padding:14px max(5vw,16px);background:#000;scroll-snap-type:x mandatory;position:relative}
+.strip::before,.strip::after{content:"";position:absolute;left:0;right:0;height:6px;background:repeating-linear-gradient(90deg,transparent 0 10px,#3a3540 10px 20px)}
+.strip::before{top:3px}.strip::after{bottom:3px}
+.strip img{height:150px;width:auto;flex:none;scroll-snap-align:start;cursor:pointer;opacity:.85;transition:opacity .2s}
+.strip img:hover{opacity:1}
+/* sobre mí */
+.about{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,72px);align-items:center}
+.about figure{margin:0;position:relative}
+.about figure img{box-shadow:0 0 0 1px rgba(139,108,255,.5),24px 24px 0 -2px rgba(139,108,255,.22);aspect-ratio:1;object-fit:cover;width:100%;border:10px solid var(--ink);border-bottom-width:44px}
+.about figcaption{position:absolute;left:14px;bottom:10px;color:#1a171d;font-size:13px;font-weight:700}
+blockquote{margin:28px 0 0;padding-left:20px;border-left:2px solid var(--vio);font-size:18px;font-style:italic;color:var(--mute)}
+blockquote cite{display:block;font-style:normal;font-size:14px;margin-top:6px}
+/* aportes */
+.aportes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:rgba(139,108,255,.28);border:1px solid var(--line);margin-top:36px}
+.aportes article{background:rgba(14,11,22,.9);padding:26px 22px}
+.aportes h3{margin-bottom:10px}
+.aportes ul{margin:0;padding-left:18px;color:var(--mute);font-size:15px}
+.aportes li{margin-bottom:6px}
+.tools{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.tools span{background:rgba(139,108,255,.08);border:1px solid var(--line);border-radius:6px;padding:8px 12px;font-size:15px}
+.tools b{color:var(--vio2);font-weight:700;margin-left:6px}
+/* proyectos */
+.proj{background:radial-gradient(rgba(139,108,255,.16) 1px,transparent 1.6px) 0 0/18px 18px,radial-gradient(70% 60% at 100% 0%,rgba(139,108,255,.18),transparent 70%),linear-gradient(180deg,rgba(26,16,48,.92),rgba(14,11,22,.94));border-block:1px solid rgba(139,108,255,.22)}
+.head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:16px 32px}
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.filters button{min-height:44px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:32px;grid-auto-flow:dense}
+.card{background:#120e1c;border:1px solid var(--line);padding:0;text-align:left;color:inherit;font:inherit;cursor:pointer;display:flex;flex-direction:column}
+.card .ph{aspect-ratio:4/3;overflow:hidden;background:#000;position:relative}
+.card .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.card:hover .ph img{transform:scale(1.04)}
+.card:hover{border-color:rgba(139,108,255,.6)}
+.card .n{z-index:1;position:absolute;left:10px;top:8px;font-size:13px;color:#fff;background:rgba(0,0,0,.55);padding:2px 8px;border-radius:4px}
+.card .tx{padding:16px 18px 20px}
+.card h3{font-size:24px}
+.card p{color:var(--mute);font-size:15px;margin:6px 0 0}
+.card .tag{font-size:13px;color:var(--vio2);font-weight:700;margin-top:4px}
+.card[hidden]{display:none}
+.card.big{grid-column:span 2}
+.card.big .ph{aspect-ratio:auto;flex:1;min-height:0}
+.more{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px;align-items:center}
+/* visor de proyecto */
+dialog{width:min(1100px,100% - 24px);max-height:calc(100svh - 24px);padding:0;border:1px solid rgba(139,108,255,.4);background:radial-gradient(60% 50% at 100% 0%,rgba(139,108,255,.16),transparent 70%),#100c18;color:var(--ink);overflow:auto}
+dialog::backdrop{background:rgba(10,6,20,.86)}
+.dlg{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr)}
+.gal{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;background:#000;height:min(72svh,640px)}
+.gal img{flex:0 0 100%;width:100%;height:100%;object-fit:contain;scroll-snap-align:center}
+.galnav{display:flex;justify-content:space-between;align-items:center;padding:8px 12px;background:#000;font-size:14px;color:var(--mute)}
+.galnav button{min-height:44px;min-width:44px;background:none;border:1px solid var(--line);color:var(--ink);border-radius:999px;cursor:pointer;font-size:18px}
+.info{padding:28px 26px}
+.info h3{font-size:36px;font-weight:800;margin-bottom:6px}
+.info dl{display:grid;grid-template-columns:auto 1fr;gap:8px 16px;margin:18px 0;font-size:15px}
+.info dt{color:var(--vio2);font-weight:700}
+.info dd{margin:0}
+.close{position:sticky;top:0;float:right;margin:10px;z-index:2;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:999px;width:44px;height:44px;cursor:pointer;font-size:20px}
+/* experiencia y formación */
+.two{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,6vw,96px)}
+.tl{list-style:none;margin:28px 0 0;padding:0}
+.tl>li{display:grid;grid-template-columns:9.5em minmax(0,1fr);gap:20px;padding:22px 0;border-top:1px solid var(--line)}
+.tl time{font-size:14px;color:var(--mute);white-space:nowrap}
+.tl h3{font-size:26px}
+.tl .org{color:var(--vio2);font-weight:700;margin:2px 0 8px;font-size:15px}
+.tl ul{margin:0;padding-left:18px;color:var(--mute);font-size:15px}
+.edu{list-style:none;padding:0;margin:28px 0 0}
+.edu li{padding:18px 0;border-top:1px solid var(--line)}
+.edu b{display:block;font-size:17px}
+.edu span{color:var(--mute);font-size:15px}
+.edu .state{display:inline-block;margin-top:8px;font-size:13px;font-weight:700;color:#fff;background:var(--vio);padding:3px 10px;border-radius:999px}
+/* contacto */
+.cta{background:radial-gradient(45% 70% at 100% 0%,rgba(139,108,255,.30),transparent 70%),radial-gradient(35% 60% at 0% 100%,rgba(139,108,255,.16),transparent 70%),repeating-linear-gradient(135deg,rgba(104,58,214,.07) 0 1px,transparent 1px 12px),var(--ink);color:#141217;position:relative}
+.cta .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,5vw,72px);align-items:start}
+.cta h2{font-size:clamp(40px,6vw,72px)}
+.cta .lead{color:#2a2630;margin-top:18px;max-width:32em}
+.cta .btn{border-color:#141217;color:#141217}
+.cta .btn.on{background:#141217;color:var(--ink)}
+.cta .btn:hover{color:var(--vio);border-color:var(--vio)}
+.cta .btn.on:hover{background:var(--vio);color:#fff}
+.links{list-style:none;margin:0;padding:0}
+.links li{display:grid;grid-template-columns:7.5em minmax(0,1fr);gap:12px;padding:14px 0;border-top:1px solid #cfc7bb;font-size:16px}
+.links li span{color:#5d5764;font-size:14px}
+.links a{font-weight:700;text-decoration:none;border-bottom:1px solid var(--vio);overflow-wrap:anywhere}
+#qr{margin-top:20px;display:none;gap:14px;align-items:center}
+#qr.show{display:flex}
+#qr .box{background:#fff;padding:10px;border:1px solid #cfc7bb}
+#qr p{font-size:14px;margin:0;color:#5d5764}
+.toast{font-size:14px;color:#5d5764;min-height:1.4em;margin-top:10px}
+footer{background:#09070e;border-top-color:rgba(139,108,255,.3)!important;padding:28px max(5vw,16px);font-size:14px;color:var(--mute);display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;border-top:1px solid var(--line)}
+@media (max-width:980px){
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .aportes{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ficha{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ficha div:nth-child(3){border-left:0}
+  .ficha div:nth-child(n+3){border-top:1px solid var(--line)}
+  .nav ul{display:none}
+  .nav .btn{margin-left:auto}
+}
+@media (max-width:760px){
+  .about,.two,.cta .wrap,.dlg{grid-template-columns:minmax(0,1fr)}
+  .about figure{max-width:340px}
+  .gal{height:min(56svh,520px)}
+}
+@media (max-width:600px){
+  .hero{min-height:auto;display:block}
+  .hero>img{position:relative;height:56svh;max-height:460px}
+  .hero::after{background:linear-gradient(0deg,var(--bg) 0%,rgba(30,16,60,.25) 55%,rgba(30,16,60,.1) 100%);height:56svh;max-height:460px}
+  .hero .in{margin-top:-70px;position:relative}
+  .credit{top:12px;bottom:auto}
+  .grid,.aportes,.ficha{grid-template-columns:minmax(0,1fr)}
+  .ficha div{border-left:0;border-top:1px solid var(--line)}
+  .ficha div:first-child{border-top:0}
+  .tl>li{grid-template-columns:minmax(0,1fr);gap:6px}
+  .card.big{grid-column:auto}
+  .card.big .ph{aspect-ratio:4/3;flex:none}
+  .strip img{height:110px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card .ph img{transition:none}.card:hover .ph img{transform:none}}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Principal">
+  <a class="brand" href="#inicio" aria-label="Caphtura, portafolio de Michelle Ramírez">
+    <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="none" stroke="#8b6cff" stroke-width="3"/><g fill="#8b6cff"><path d="M20 4 27 14H13z"/><path d="M34 15 28 26 22 14z" opacity=".8"/><path d="M29 33 17 30 26 19z" opacity=".65"/><path d="M8 30 13 18 19 29z" opacity=".8"/><path d="M7 13 18 12 12 24z" opacity=".9"/></g></svg>
+    <span class="mark">CAPHTURA</span>
+  </a>
+  <ul>
+    <li><a href="#sobre-mi">Sobre mí</a></li>
+    <li><a href="#aportes">Qué aporto</a></li>
+    <li><a href="#proyectos">Proyectos</a></li>
+    <li><a href="#experiencia">Experiencia</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+  <a class="btn on" href="#contacto">Contactarme</a>
+</nav>
+
+<header class="hero" id="inicio">
+  <img src="img/mrkilombo.webp" width="1800" height="1012" decoding="async" alt="Concierto de Mr Kilombo en blanco y negro: el cantante a contraluz frente al público, con una bola de espejos" fetchpriority="high">
+  <div class="in">
+    <h1>Michelle<br>Ramírez</h1>
+    <p class="role">Realizadora audiovisual · <b>fotografía, edición y dirección de arte</b></p>
+    <p class="lead">Estudiante de décimo semestre de Dirección y Producción de Medios Audiovisuales en la CUN. Busco mis prácticas empresariales en un equipo audiovisual de Bogotá.</p>
+    <div class="acts">
+      <a class="btn on" href="#proyectos">Ver proyectos</a>
+      <a class="btn" href="#contacto">Escribirme</a>
+    </div>
+  </div>
+  <span class="credit">Foto: Mr Kilombo en concierto · Michelle Ramírez</span>
+</header>
+
+<dl class="ficha" aria-label="Resumen del perfil">
+  <div><dt>Estudia</dt><dd>Dirección y Producción de Medios Audiovisuales, CUN · décimo semestre</dd></div>
+  <div><dt>Sabe hacer</dt><dd>Fotografía de conciertos, retrato y producto · edición de video vertical · diseño en Illustrator</dd></div>
+  <div><dt>Busca</dt><dd>Prácticas empresariales para culminar su carrera, en Bogotá</dd></div>
+  <div><dt>Contacto</dt><dd><a href="mailto:caphtura1220@gmail.com">caphtura1220@gmail.com</a><br>+57 324 845 4121</dd></div>
+</dl>
+
+<div class="strip" id="strip" aria-label="Selección de fotogramas"></div>
+
+<section class="band" id="sobre-mi">
+  <div class="wrap about">
+    <figure>
+      <img src="img/michelle-retrato.webp" width="1152" height="1152" decoding="async" alt="Retrato en blanco y negro de Michelle Ramírez con sombrero y gafas" loading="lazy">
+      <figcaption>Michelle Ramírez · Caphtura</figcaption>
+    </figure>
+    <div>
+      <h2>Contar con luz y con sombra</h2>
+      <p class="lead" style="margin-top:20px">Soy estudiante de Medios Audiovisuales con enfoque en comunicación visual, narrativa creativa y producción de contenido. Trabajo con fotografía, ilustración y propuestas visuales, y he aprendido a hacerlo en equipo: editando para marcas en una productora, cubriendo partidos y apoyando transmisiones en vivo.</p>
+      <p class="mute">Me interesa la fotografía en baja luz: los contrastes y las sombras de un escenario, y las personas que normalmente pasan desapercibidas. Firmo mi trabajo fotográfico como <b>Caphtura</b>.</p>
+      <blockquote>“A través de mi cámara lograba captar momentos, lugares, miradas y acciones que en esencia llenaban mi ser; después me di cuenta de que esto se llama vocación.”<cite>Michelle Ramírez</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="aportes" style="padding-top:0">
+  <div class="wrap">
+    <h2>Lo que puedo aportar a un equipo</h2>
+    <div class="aportes">
+      <article><h3>Fotografía</h3><ul><li>Conciertos y escenarios con poca luz</li><li>Retrato y sesiones editoriales</li><li>Fotografía de producto</li><li>Cobertura de eventos deportivos</li></ul></article>
+      <article><h3>Video y edición</h3><ul><li>Edición de video en formato vertical para redes</li><li>Contenido audiovisual para marcas</li><li>Filmmaking de producto</li></ul></article>
+      <article><h3>Diseño y dirección de arte</h3><ul><li>Piezas digitales y carruseles para Instagram</li><li>Portadas y piezas gráficas</li><li>Ilustración y personajes publicitarios</li><li>Diseño de interfaces</li></ul></article>
+      <article><h3>Producción en equipo</h3><ul><li>Trabajo colaborativo en equipos de producción</li><li>Apoyo en transmisión en vivo y coordinación técnica</li><li>Coherencia visual de marca: composición, color y tipografía</li></ul></article>
+    </div>
+    <div class="tools" aria-label="Herramientas">
+      <span>Illustrator<b>avanzado</b></span><span>Canva<b>avanzado</b></span><span>Photoshop<b>intermedio</b></span><span>Premiere Pro<b>intermedio</b></span>
+    </div>
+  </div>
+</section>
+
+<section class="band proj" id="proyectos">
+  <div class="wrap">
+    <div class="head">
+      <h2>Proyectos</h2>
+      <div class="filters" role="group" aria-label="Filtrar proyectos" id="filters">
+        <button class="btn on" data-f="todos" aria-pressed="true">Todos</button>
+        <button class="btn" data-f="musica" aria-pressed="false">Música en vivo</button>
+        <button class="btn" data-f="retrato" aria-pressed="false">Retrato</button>
+        <button class="btn" data-f="diseno" aria-pressed="false">Diseño</button>
+        <button class="btn" data-f="paisaje" aria-pressed="false">Naturaleza</button>
+      </div>
+    </div>
+    <div class="grid" id="grid"></div>
+    <div class="more">
+      <a class="btn on" href="https://drive.google.com/drive/folders/1X94EyIO0OyCO-OyJ48iq__M4d0feGoEr" target="_blank" rel="noopener">Ver videos y proyectos audiovisuales</a>
+      <a class="btn" href="https://www.behance.net/Caphtura" target="_blank" rel="noopener">Más fotografía en Behance</a>
+    </div>
+  </div>
+</section>
+
+<dialog id="dlg" aria-labelledby="dTitle">
+  <button class="close" id="dClose" aria-label="Cerrar">×</button>
+  <div class="dlg">
+    <div>
+      <div class="gal" id="dGal" tabindex="0" aria-label="Imágenes del proyecto"></div>
+      <div class="galnav"><button id="dPrev" aria-label="Imagen anterior">‹</button><span id="dCount"></span><button id="dNext" aria-label="Imagen siguiente">›</button></div>
+    </div>
+    <div class="info">
+      <p class="mute" id="dCat" style="margin:0 0 6px;font-size:14px"></p>
+      <h3 id="dTitle"></h3>
+      <dl id="dMeta"></dl>
+      <p id="dDesc"></p>
+      <p class="mute" id="dQuote" style="font-style:italic"></p>
+    </div>
+  </div>
+</dialog>
+
+<section class="band" id="experiencia">
+  <div class="wrap two">
+    <div>
+      <h2>Experiencia</h2>
+      <ol class="tl">
+        <li><time>Mayo 2025</time><div><h3>Fotógrafa de producto y filmmaker</h3><p class="org">Avokato · Bogotá</p></div></li>
+        <li><time>Feb. – jun. 2024</time><div><h3>Editora</h3><p class="org">Bustacara Producciones · Bogotá</p><ul><li>Producción de contenido audiovisual para Converse, Zenú e instituciones educativas</li><li>Edición de video en formato vertical</li><li>Trabajo colaborativo en equipos de producción</li></ul></div></li>
+        <li><time>Oct. 2021 – ene. 2022</time><div><h3>Fotógrafa principal</h3><p class="org">Club deportivo Wolfking F.C. · Puerto Vallarta, México</p><ul><li>Cobertura fotográfica de eventos deportivos</li><li>Apoyo en transmisión en vivo y coordinación técnica</li></ul></div></li>
+      </ol>
+    </div>
+    <div id="formacion">
+      <h2>Formación</h2>
+      <ul class="edu">
+        <li><b>Dirección y Producción de Medios Audiovisuales</b><span>Corporación Unificada Nacional de Educación Superior (CUN)</span><br><span class="state">Décimo semestre</span></li>
+        <li><b>Creación de personajes publicitarios</b><span>SENA · 2023</span></li>
+        <li><b>Ilustración publicitaria</b><span>Godesign MX · 2023</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="band cta" id="contacto">
+  <div class="wrap">
+    <div>
+      <h2>Busco mis prácticas en un equipo audiovisual</h2>
+      <p class="lead">Quiero sumar mi mirada fotográfica, mi experiencia en edición para marcas y mi trabajo en diseño a una productora, agencia, canal o estudio, mientras termino mi carrera. Tengo disponibilidad en Bogotá.</p>
+      <div class="acts">
+        <a class="btn on" href="mailto:caphtura1220@gmail.com?subject=Pr%C3%A1cticas%20empresariales%20-%20Michelle%20Ram%C3%ADrez">Enviar un correo</a>
+        <a class="btn" href="https://wa.me/573248454121" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+        <button class="btn" id="copy" type="button">Copiar correo</button>
+      </div>
+      <p class="toast" id="toast" role="status"></p>
+    </div>
+    <div>
+      <ul class="links">
+        <li><span>Correo</span><a href="mailto:caphtura1220@gmail.com">caphtura1220@gmail.com</a></li>
+        <li><span>Teléfono</span><a href="tel:+573248454121">+57 324 845 4121</a></li>
+        <li><span>Instagram</span><a href="https://www.instagram.com/caphtura/" target="_blank" rel="noopener">@caphtura</a></li>
+        <li><span>Behance</span><a href="https://www.behance.net/Caphtura" target="_blank" rel="noopener">behance.net/Caphtura</a></li>
+        <li><span>Videos</span><a href="https://drive.google.com/drive/folders/1X94EyIO0OyCO-OyJ48iq__M4d0feGoEr" target="_blank" rel="noopener">Carpeta de proyectos audiovisuales</a></li>
+        <li><span>Ciudad</span>Bogotá, Colombia</li>
+      </ul>
+      <div id="qr"><div class="box" id="qrBox"></div><p>Escanea para abrir este portafolio en tu teléfono.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>© 2026 Michelle Ramírez · Caphtura</span>
+  <span>Todas las fotografías y piezas son trabajo de Michelle Ramírez.</span>
+</footer>
+
+<script>
+{
+/* ===== CONFIGURACIÓN EDITABLE =====
+   SITE_URL: cuando publiques el sitio, escribe aquí su dirección pública
+   (por ejemplo "https://michelleramirez.netlify.app"). Con eso aparece el
+   código QR en la sección de contacto. Mientras esté vacío, no se muestra. */
+const SITE_URL = "https://caphtura.art";
+
+/* ===== PROYECTOS =====
+   Para agregar un proyecto, copia un bloque y cambia sus datos.
+   cat: musica | retrato | diseno | paisaje
+   Campos marcados con PENDIENTE: confirmar con Michelle antes de publicar. */
+const P = [
+  {id:"nonservium", big:1, cat:"musica", t:"NonServium", tag:"Grita Festival 2024", d:"Fotografía de la presentación de NonServium en el Grita Festival 2024: luces de escenario, energía del público y el artista en primer plano.", rol:"Fotografía", tools:"", /* PENDIENTE: cámara y software */ img:["nonservium-escena","nonservium"]},
+  {id:"kilombo", cat:"musica", t:"Mr Kilombo", tag:"Concierto · blanco y negro", d:"Cobertura de concierto resuelta en blanco y negro, con el contraluz y la bola de espejos como protagonistas.", rol:"Fotografía", q:"“Me perdí pa’ encontrarme de nuevo y ahora sé que valió la pena.”", img:["mrkilombo","mrkilombo-2"]},
+  {id:"rupatrupa", cat:"musica", t:"Rupatrupa", tag:"Concierto", d:"Retratos en vivo de Rupatrupa: gestos cercanos del músico con la guitarra en escena.", rol:"Fotografía", q:"“Para qué quiero el dinero si las sonrisas no se pueden comprar.”", img:["rupatrupa-1","rupatrupa-2"]},
+  {id:"bajaluz", cat:"musica", t:"Cuando la luz escasea", tag:"Fotografía en baja luz", d:"Serie de músicos en escenario donde la poca luz se vuelve el estilo: contrastes fuertes, rojos y sombras.", rol:"Fotografía", q:"“Cuando la luz escasea encuentro contrastes, sombras que me llevan a lograr el estilo fotográfico con el que conecto.”", img:["concierto-1","concierto-2","concierto-escena"]},
+  {id:"retratos", cat:"retrato", t:"Retratos", tag:"Serie de retrato", d:"Serie de retratos con luz natural y tonos fríos, centrada en la mirada de cada persona.", rol:"Fotografía", q:"“Somos en esencia especiales; me rehúso a la idea de la inmediatez, donde todos pasamos desapercibidos.”", img:["retrato-1","retrato-2","retrato-3"]},
+  {id:"maternidad", big:1, pos:"50% 12%", cat:"retrato", t:"¿Y tú cómo estás?", tag:"Sesión de maternidad", d:"Sesión de maternidad en color y blanco y negro, acompañada de un texto propio sobre cómo cambia la autoestima de una mujer durante el embarazo y la pregunta que casi nadie le hace.", rol:"Fotografía y texto", img:["maternidad-1","maternidad-4","maternidad-2","maternidad-3","maternidad-5","maternidad-6"]},
+  {id:"onlever", pos:"50% 62%", cat:"diseno", t:"ONLEVER", tag:"Portada de documental", d:"Portada para el documental “Coexistiendo con el arte” del proyecto ONLEVER, sobre el álbum musical de David Cañón (2026). Tipografía alta y condensada sobre fotografía en penumbra.", rol:"Diseño de portada", img:["onlever"]},
+  {id:"carruseles", cat:"diseno", t:"Carruseles para Instagram", tag:"Diseño para redes", d:"Carruseles de fotografía de naturaleza para Instagram, con marcos, texto manuscrito y una paleta verde que une todas las piezas.", rol:"Fotografía y diseño", img:["carrusel-1","carrusel-2","carrusel-3"]},
+  {id:"multiverso", cat:"diseno", t:"Plataforma multiverso", tag:"Diseño de interfaz", d:"Diseño de interfaz interactiva para una plataforma de aventuras: elección de avatar, mapa, compañeros de travesía, monedas y recuerdos, con personajes ilustrados.", rol:"Diseño de interfaz e ilustración", /* PENDIENTE: confirmar si las ilustraciones son propias */ img:["multiverso-2","multiverso-3","multiverso-1"]},
+  {id:"naturaleza", cat:"paisaje", t:"Naturaleza y ciudad", tag:"Fotografía de paisaje", d:"Fotografía de paisaje y arquitectura: torres, palmas, una chimenea industrial entre la vegetación y escenas de playa.", rol:"Fotografía", img:["playa-2","paisaje-1","paisaje-2","paisaje-3","playa-1"]}
+];
+
+const $ = s => document.querySelector(s);
+/* IMG solo existe en la versión de un solo archivo (imágenes incrustadas) */
+const src = n => (window.IMG && IMG[n]) || "img/" + n + ".webp";
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const catName = {musica:"Música en vivo", retrato:"Retrato", diseno:"Diseño", paisaje:"Naturaleza"};
+
+$("#grid").innerHTML = P.map((p,i) => `
+  <button class="card${p.big?" big":""}" data-cat="${p.cat}" data-i="${i}" aria-label="Ver proyecto ${esc(p.t)}">
+    <div class="ph"><img src="${src(p.img[0])}" alt="" loading="lazy" decoding="async"${p.pos?` style="object-position:${p.pos}"`:""}><span class="n">${p.img.length} ${p.img.length>1?"imágenes":"imagen"}</span></div>
+    <div class="tx"><h3>${esc(p.t)}</h3><p class="tag">${esc(p.tag)}</p><p>${esc(p.rol)}</p></div>
+  </button>`).join("");
+
+const stripPicks = [["nonservium",0],["retrato-1",4],["rupatrupa-1",2],["onlever",6],["concierto-1",3],["maternidad-4",5],["retrato-2",4],["carrusel-1",7],["mrkilombo-2",1],["paisaje-2",9],["concierto-2",3],["multiverso-2",8]];
+$("#strip").innerHTML = stripPicks.map(([n,i]) => `<img src="${src(n)}" alt="Abrir proyecto ${esc(P[i].t)}" data-i="${i}" loading="lazy" decoding="async" tabindex="0">`).join("");
+
+/* filtros */
+$("#filters").addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  for (const x of document.querySelectorAll("#filters button")) { const on = x === b; x.classList.toggle("on", on); x.setAttribute("aria-pressed", on); }
+  for (const c of document.querySelectorAll(".card")) c.hidden = !(b.dataset.f === "todos" || c.dataset.cat === b.dataset.f);
+});
+
+/* visor */
+const dlg = $("#dlg"), gal = $("#dGal");
+let cur = 0;
+const count = () => { const n = gal.children.length; cur = Math.round(gal.scrollLeft / (gal.clientWidth || 1)); $("#dCount").textContent = (cur+1) + " de " + n; };
+const go = d => { const n = gal.children.length; cur = (cur + d + n) % n; gal.scrollTo({left: cur * gal.clientWidth, behavior: matchMedia("(prefers-reduced-motion:reduce)").matches ? "auto" : "smooth"}); };
+function openP(i){
+  const p = P[i];
+  $("#dCat").textContent = catName[p.cat];
+  $("#dTitle").textContent = p.t;
+  $("#dDesc").textContent = p.d;
+  $("#dQuote").textContent = p.q || "";
+  const meta = [["Proyecto", p.tag], ["Rol", p.rol]]; if (p.tools) meta.push(["Herramientas", p.tools]);
+  $("#dMeta").innerHTML = meta.map(([a,b]) => `<dt>${esc(a)}</dt><dd>${esc(b)}</dd>`).join("");
+  gal.innerHTML = p.img.map((n,k) => `<img src="${src(n)}" alt="${esc(p.t)}, imagen ${k+1} de ${p.img.length}">`).join("");
+  document.querySelector(".galnav").style.display = p.img.length > 1 ? "flex" : "none";
+  cur = 0; if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open",""); gal.scrollLeft = 0; count();
+}
+const closeD = () => dlg.close ? dlg.close() : dlg.removeAttribute("open");
+$("#grid").addEventListener("click", e => { const c = e.target.closest(".card"); if (c) openP(+c.dataset.i); });
+$("#strip").addEventListener("click", e => { if (e.target.dataset.i) openP(+e.target.dataset.i); });
+$("#strip").addEventListener("keydown", e => { if (e.key === "Enter" && e.target.dataset.i) openP(+e.target.dataset.i); });
+$("#dClose").addEventListener("click", closeD);
+dlg.addEventListener("click", e => { if (e.target === dlg) closeD(); });
+$("#dPrev").addEventListener("click", () => go(-1));
+$("#dNext").addEventListener("click", () => go(1));
+gal.addEventListener("scroll", () => requestAnimationFrame(count));
+dlg.addEventListener("keydown", e => { if (e.key === "ArrowRight") go(1); if (e.key === "ArrowLeft") go(-1); });
+
+/* copiar correo */
+$("#copy").addEventListener("click", async () => {
+  try { await navigator.clipboard.writeText("caphtura1220@gmail.com"); $("#toast").textContent = "Correo copiado: caphtura1220@gmail.com"; }
+  catch (err) { $("#toast").textContent = "Copia este correo: caphtura1220@gmail.com"; }
+});
+
+/* QR: solo cuando el sitio ya tiene dirección pública */
+if (SITE_URL) {
+  const s = document.createElement("script");
+  s.src = "https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js";
+  s.onload = () => { new QRCode($("#qrBox"), {text: SITE_URL, width: 132, height: 132, colorDark: "#141217", colorLight: "#ffffff", correctLevel: QRCode.CorrectLevel.H}); $("#qr").classList.add("show"); };
+  document.body.appendChild(s);
+}
+}
+</script>
+</body>
+</html>
